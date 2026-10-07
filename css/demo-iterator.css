@@ -1,0 +1,29 @@
+/* ---------- iterator demo ---------- */
+.it-choose { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 6px; }
+.it-radio {
+  display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px;
+  border: 2px solid var(--border); border-radius: 12px; background: var(--surface-2); cursor: pointer;
+}
+.it-radio:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.it-radio:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.it-radio input { accent-color: var(--accent); width: 18px; height: 18px; }
+.it-view { margin: 12px 0; padding: 14px; border: 1px dashed var(--border-strong); border-radius: var(--radius); overflow-x: auto; }
+.it-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.it-cell { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.it-cell small { color: var(--muted); font-family: var(--mono); }
+.it-tree { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+.it-level { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 14px; }
+.it-node {
+  display: inline-block; min-width: 58px; padding: 8px 10px; text-align: center; font-weight: 600; font-size: 14px;
+  border: 2px solid var(--border); border-radius: 10px; background: var(--surface-2); color: var(--muted);
+  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+}
+.it-node.is-seen { border-color: var(--good); background: var(--good-soft); color: var(--text); }
+.it-node.is-current { border-color: var(--accent); background: var(--accent-soft); color: var(--text); transform: scale(1.1); }
+.it-controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+.it-controls .btn { min-height: 44px; }
+.it-controls .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.it-status { display: flex; flex-direction: column; gap: 4px; margin-top: 10px; }
+.it-has { font: 700 14px var(--mono); color: var(--good); }
+.it-has.is-false { color: var(--bad); }
+.it-visited { font-family: var(--mono); font-size: 14px; overflow-wrap: anywhere; }

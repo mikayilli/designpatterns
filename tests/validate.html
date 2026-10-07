@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pattern validation</title>
+  <style>
+    body { font: 16px/1.5 system-ui, sans-serif; margin: 24px; }
+    table { border-collapse: collapse; }
+    th, td { border: 1px solid #ccc; padding: 6px 12px; text-align: left; vertical-align: top; }
+    .ok { background: #e5f6ec; }
+    .fail { background: #fdeaea; }
+  </style>
+</head>
+<body>
+  <h1>Pattern validation</h1>
+  <p id="summary"></p>
+  <table>
+    <thead><tr><th>Pattern</th><th>Status</th><th>Problems</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <script src="../js/registry.js"></script>
+  <script src="../js/validate.js"></script>
+  <script src="../patterns/observer.logic.js"></script>
+  <script src="../patterns/observer.js"></script>
+  <script src="../patterns/strategy.logic.js"></script>
+  <script src="../patterns/strategy.js"></script>
+  <script src="../patterns/singleton.logic.js"></script>
+  <script src="../patterns/singleton.js"></script>
+  <script src="../patterns/factory-method.logic.js"></script>
+  <script src="../patterns/factory-method.js"></script>
+  <script src="../patterns/builder.logic.js"></script>
+  <script src="../patterns/builder.js"></script>
+  <script src="../patterns/adapter.logic.js"></script>
+  <script src="../patterns/adapter.js"></script>
+  <script src="../patterns/decorator.logic.js"></script>
+  <script src="../patterns/decorator.js"></script>
+  <script src="../patterns/facade.logic.js"></script>
+  <script src="../patterns/facade.js"></script>
+  <script src="../patterns/proxy.logic.js"></script>
+  <script src="../patterns/proxy.js"></script>
+  <script src="../patterns/command.logic.js"></script>
+  <script src="../patterns/command.js"></script>
+  <script src="../patterns/state.logic.js"></script>
+  <script src="../patterns/state.js"></script>
+  <script src="../patterns/iterator.logic.js"></script>
+  <script src="../patterns/iterator.js"></script>
+  <!-- PATTERN SCRIPTS -->
+  <script>
+    const results = DP.validate.validateAll(DP.patterns);
+    const rows = document.getElementById('rows');
+    results.forEach((r) => {
+      const tr = document.createElement('tr');
+      tr.className = r.problems.length ? 'fail' : 'ok';
+      [r.id, r.problems.length ? 'PROBLEMS' : 'OK', r.problems.join('; ')].forEach((text) => {
+        const td = document.createElement('td');
+        td.textContent = text;
+        tr.appendChild(td);
+      });
+      rows.appendChild(tr);
+    });
+    const failing = results.filter((r) => r.problems.length).length;
+    document.getElementById('summary').textContent =
+      `${results.length} patterns, ${failing} with problems.`;
+  </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="az" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design Patterns</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- per-pattern demo styles -->
+  <link rel="stylesheet" href="css/demo-singleton.css">
+  <link rel="stylesheet" href="css/demo-factory-method.css">
+  <link rel="stylesheet" href="css/demo-builder.css">
+  <link rel="stylesheet" href="css/demo-adapter.css">
+  <link rel="stylesheet" href="css/demo-decorator.css">
+  <link rel="stylesheet" href="css/demo-facade.css">
+  <link rel="stylesheet" href="css/demo-proxy.css">
+  <link rel="stylesheet" href="css/demo-command.css">
+  <link rel="stylesheet" href="css/demo-state.css">
+  <link rel="stylesheet" href="css/demo-iterator.css">
+</head>
+<body>
+  <header class="topbar">
+    <button id="menu-toggle" class="icon-btn" type="button" aria-controls="nav" aria-expanded="false" data-i18n-aria="menu">☰</button>
+    <strong class="brand" data-i18n="appTitle">Design Patterns</strong>
+    <button id="theme-toggle" class="icon-btn" type="button" data-i18n-aria="theme">◐</button>
+  </header>
+  <div id="scrim" class="scrim"></div>
+
+  <!-- Desktop: floats inside the top bar. Mobile: its own row that scrolls away with the page,
+       so only the slim menu / brand / theme row stays stuck. -->
+  <div class="controls-bar">
+    <div class="controls">
+      <div class="seg" role="group" data-i18n-aria="language">
+        <button type="button" data-lang="az" aria-pressed="true">AZ</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <div class="seg" role="group" data-i18n-aria="codeLanguage">
+        <button type="button" data-code="cpp" aria-pressed="false">C++</button>
+        <button type="button" data-code="java" aria-pressed="false">Java</button>
+        <button type="button" data-code="js" aria-pressed="true">JS</button>
+        <button type="button" data-code="php" aria-pressed="false">PHP</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <nav id="nav" class="sidebar"></nav>
+    <main id="page" class="content"></main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup-templating.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-php.min.js"></script>
+
+  <script src="js/registry.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/dom.js"></script>
+  <script src="js/state.js"></script>
+  <script src="patterns/observer.logic.js"></script>
+  <script src="patterns/observer.demo.js"></script>
+  <script src="patterns/observer.js"></script>
+  <script src="patterns/strategy.logic.js"></script>
+  <script src="patterns/strategy.demo.js"></script>
+  <script src="patterns/strategy.js"></script>
+  <script src="patterns/singleton.logic.js"></script>
+  <script src="patterns/singleton.demo.js"></script>
+  <script src="patterns/singleton.js"></script>
+  <script src="patterns/factory-method.logic.js"></script>
+  <script src="patterns/factory-method.demo.js"></script>
+  <script src="patterns/factory-method.js"></script>
+  <script src="patterns/builder.logic.js"></script>
+  <script src="patterns/builder.demo.js"></script>
+  <script src="patterns/builder.js"></script>
+  <script src="patterns/adapter.logic.js"></script>
+  <script src="patterns/adapter.demo.js"></script>
+  <script src="patterns/adapter.js"></script>
+  <script src="patterns/decorator.logic.js"></script>
+  <script src="patterns/decorator.demo.js"></script>
+  <script src="patterns/decorator.js"></script>
+  <script src="patterns/facade.logic.js"></script>
+  <script src="patterns/facade.demo.js"></script>
+  <script src="patterns/facade.js"></script>
+  <script src="patterns/proxy.logic.js"></script>
+  <script src="patterns/proxy.demo.js"></script>
+  <script src="patterns/proxy.js"></script>
+  <script src="patterns/command.logic.js"></script>
+  <script src="patterns/command.demo.js"></script>
+  <script src="patterns/command.js"></script>
+  <script src="patterns/state.logic.js"></script>
+  <script src="patterns/state.demo.js"></script>
+  <script src="patterns/state.js"></script>
+  <script src="patterns/iterator.logic.js"></script>
+  <script src="patterns/iterator.demo.js"></script>
+  <script src="patterns/iterator.js"></script>
+  <!-- PATTERN SCRIPTS -->
+  <script src="js/render.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

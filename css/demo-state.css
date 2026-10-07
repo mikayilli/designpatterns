@@ -1,0 +1,22 @@
+/* ---------- state demo ---------- */
+.st-order {
+  margin: 14px 0 4px; padding: 14px 18px; border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--accent-soft), var(--surface-2));
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.st-current { display: block; font-size: 24px; font-weight: 800; }
+.st-flow { display: flex; flex-direction: column; gap: 10px; }
+.st-flow-main { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+.st-chip {
+  padding: 8px 12px; border-radius: 999px; border: 2px solid var(--border);
+  background: var(--surface-2); color: var(--muted); font-size: 14px; font-weight: 600;
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+.st-chip.is-current { border-color: var(--accent); background: var(--accent-soft); color: var(--text); }
+.st-arrow { color: var(--muted); }
+.st-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 10px; }
+.st-btn, .st-actions .btn { min-height: 44px; }
+.st-actions .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.st-check { display: flex; align-items: flex-start; gap: 10px; min-height: 44px; font-size: 14px; cursor: pointer; }
+.st-check input { width: 22px; height: 22px; flex: none; accent-color: var(--accent); }
+.console-line.err { color: #ff9a9a; }

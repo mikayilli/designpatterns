@@ -1,0 +1,23 @@
+/* ---------- singleton demo ---------- */
+.sg-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 14px 0; }
+.sg-col {
+  display: flex; flex-direction: column; align-items: stretch; gap: 10px; padding: 14px;
+  border: 2px solid var(--border); border-radius: var(--radius); background: var(--surface-2); min-width: 0;
+}
+.sg-col.bad { border-color: color-mix(in srgb, var(--bad) 45%, var(--border)); }
+.sg-col.good { border-color: color-mix(in srgb, var(--good) 45%, var(--border)); }
+.sg-col h3 { margin: 0; font-size: 16px; }
+.sg-col.bad h3 { color: var(--bad); }
+.sg-col.good h3 { color: var(--good); }
+.sg-col .btn { min-height: 44px; overflow-wrap: anywhere; }
+.sg-col .btn code { font-family: var(--mono); font-size: 13px; }
+.sg-counter { font-size: 14px; color: var(--muted); }
+.sg-count { font-size: 30px; font-weight: 800; margin-left: 6px; }
+.sg-count.bad { color: var(--bad); }
+.sg-count.good { color: var(--good); }
+.sg-vars { display: flex; flex-wrap: wrap; gap: 8px; min-height: 36px; align-items: center; }
+.sg-chip { padding: 4px 10px; border-radius: 999px; font-size: 13px; border: 1px solid var(--border-strong); background: var(--surface); }
+.sg-chip.bad { background: var(--bad-soft); }
+.sg-chip.good { background: var(--good-soft); }
+.sg-chip code { font-family: var(--mono); }
+.sg-try { border-style: dashed; }

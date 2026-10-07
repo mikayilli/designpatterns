@@ -1,0 +1,25 @@
+/* ---------- adapter demo ---------- */
+.adp-choices { display: flex; flex-wrap: wrap; gap: 8px; }
+.adp-choice { min-height: 44px; font-family: var(--mono); font-size: 13px; }
+.adp-choice[aria-pressed='true'] { border-color: var(--accent); background: var(--accent-soft); color: var(--text); }
+.adp-row {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 16px 0 12px;
+}
+.adp-box {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center;
+  padding: 12px 8px; min-height: 84px; border: 2px solid var(--border); border-radius: var(--radius);
+  background: var(--surface-2); overflow-wrap: anywhere;
+}
+.adp-box code { font-family: var(--mono); font-size: 12px; }
+.adp-icon { font-size: 26px; line-height: 1.1; }
+.adp-adapter { border-style: dashed; color: var(--muted); }
+.adp-adapter.on { border-style: solid; border-color: var(--accent); background: var(--accent-soft); color: var(--text); }
+.adp-plug.mismatch { border-color: var(--bad); background: var(--bad-soft); }
+.adp-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.adp-actions .btn { min-height: 44px; }
+.adp-connect { border-color: var(--accent); color: var(--accent); min-width: 96px; }
+.adp-status { margin: 12px 0 0; padding: 10px 14px; border-radius: 12px; background: var(--surface-2); font-weight: 600; }
+.adp-status.good { background: var(--good-soft); }
+.adp-status.bad { background: var(--bad-soft); }
+.adp-status.warn { border: 1px solid var(--warn); }
+.adp-value { font-weight: 800; color: var(--text); }

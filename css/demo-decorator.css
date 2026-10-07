@@ -1,0 +1,29 @@
+/* ---------- decorator demo ---------- */
+.dec-buttons { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; }
+.dec-add, .dec-reset { min-height: 44px; }
+.dec-reset { border-style: dashed; }
+.dec-layers { display: flex; justify-content: center; padding: 6px 0; }
+.dec-layer { border-radius: var(--radius); padding: 10px; box-sizing: border-box; max-width: 100%; }
+.dec-core {
+  display: flex; align-items: center; gap: 8px; justify-content: center; min-width: 110px;
+  background: var(--surface-2); border: 2px solid var(--accent);
+}
+.dec-wrap { border: 2px solid var(--border-strong); background: var(--accent-soft); animation: dec-pop 0.3s ease; }
+.dec-wrap .dec-wrap { background: var(--surface-2); }
+.dec-wrap .dec-wrap .dec-wrap { background: var(--accent-soft); }
+.dec-tag { display: block; margin-bottom: 6px; font: 600 12px var(--mono); color: var(--muted); overflow-wrap: anywhere; }
+.dec-icon { font-size: 22px; }
+.dec-layer-list { text-align: center; overflow-wrap: anywhere; }
+.dec-summary { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 12px 0; font-size: 16px; }
+.dec-desc { font-weight: 700; overflow-wrap: anywhere; }
+.dec-price { font-weight: 800; color: var(--accent); }
+.dec-compare { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.dec-side { padding: 12px 14px; border: 2px solid var(--border); border-radius: var(--radius); background: var(--surface-2); }
+.dec-side.bad { border-color: var(--bad); background: var(--bad-soft); }
+.dec-side.good { border-color: var(--good); background: var(--good-soft); }
+.dec-count { display: block; font-size: 34px; font-weight: 800; line-height: 1.2; }
+.dec-count.bad { color: var(--bad); }
+.dec-count.good { color: var(--good); }
+.dec-class { display: block; font: 12px var(--mono); overflow-wrap: anywhere; margin-top: 2px; }
+@keyframes dec-pop { from { transform: scale(0.94); opacity: 0.4; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .dec-wrap { animation: none; } }

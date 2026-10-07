@@ -1,0 +1,22 @@
+/* ---------- command demo ---------- */
+.cmd-doc-wrap {
+  margin: 14px 0 10px; padding: 14px 16px; border-radius: var(--radius);
+  background: var(--surface-2); border: 1px solid var(--border);
+}
+.cmd-doc { display: block; margin-top: 6px; font: 600 20px/1.5 var(--mono); word-break: break-word; min-height: 30px; }
+.cmd-doc.is-empty { color: var(--muted); font-weight: 400; font-style: italic; }
+.cmd-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+.cmd-row .btn { min-height: 44px; }
+.cmd-row .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.cmd-history { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.cmd-item {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px;
+  padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface-2);
+}
+.cmd-item code { overflow-wrap: anywhere; }
+.cmd-item.is-done { border-color: var(--good); background: var(--good-soft); }
+.cmd-item.is-undone { opacity: 0.6; border-style: dashed; }
+.cmd-item.is-undone code { text-decoration: line-through; }
+.cmd-item.is-current { border-width: 2px; }
+.cmd-item.muted-item { color: var(--muted); border-style: dashed; }
+.cmd-tag { font-size: 12px; color: var(--muted); }

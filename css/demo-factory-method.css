@@ -1,0 +1,16 @@
+/* ---------- factory-method demo ---------- */
+.fm-amount { font-size: 22px; font-weight: 800; min-width: 80px; }
+.fm-flow { display: flex; align-items: stretch; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 16px 0 6px; }
+.fm-step {
+  display: flex; flex-direction: column; gap: 4px; padding: 10px 14px; min-width: 130px; text-align: center;
+  border: 2px solid var(--border); border-radius: var(--radius); background: var(--surface-2);
+}
+.fm-step.accent { border-color: var(--accent); background: var(--accent-soft); }
+.fm-step code { font-family: var(--mono); font-weight: 700; font-size: 14px; overflow-wrap: anywhere; }
+.fm-arrow { align-self: center; font-size: 22px; color: var(--muted); }
+.fm-result { margin: 12px 0 0; padding: 10px 14px; border-radius: 12px; background: var(--good-soft); color: var(--text); min-height: 44px; }
+
+@media (max-width: 520px) {
+  .fm-flow { flex-direction: column; align-items: stretch; }
+  .fm-arrow { transform: rotate(90deg); }
+}
